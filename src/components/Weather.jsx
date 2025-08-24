@@ -24,7 +24,7 @@ const Weather = () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
 
             const utcTimestamp = data.dt;
             const timezoneOffset = data.timezone;

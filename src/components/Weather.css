@@ -100,15 +100,37 @@ body {
     text-align: left;
 }
 
+
 .temperature {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 650;
     margin: 0;
 }
 
-.unit {
-    font-size: 1.2rem;
-    font-weight: normal;
+.unit-toggle-inline {
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.unit-toggle-inline .separator {
+    color: #000;
+    font-weight: 300;
+}
+
+/* normal */
+.unit-toggle-inline span {
+    color: #444444;
+    transition: color 0.3s;
+}
+
+/* Active */
+.unit-toggle-inline span.active {
+    color: #000;
+
 }
 
 .w-description {

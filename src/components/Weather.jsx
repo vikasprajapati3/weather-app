@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import './Weather.css';
 
 
@@ -6,6 +7,8 @@ import './Weather.css';
 const Weather = () => {
 
     const inputRef = useRef();
+    const [unit, setUnit] = useState("C");
+
     const [weatherData, setWeatherData] = useState(false);
     function getWindDirection(degree) {
         const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
@@ -103,18 +106,40 @@ const Weather = () => {
 
                     {/* Main Weather Display */}
                     <div className="weather-main">
+
+                        <div className="temp-info">
+                            <p className="temperature">
+                                {unit === "C"
+                                    ? weatherData.temperature
+                                    : Math.floor((weatherData.temperature * 9) / 5 + 32)
+                                }°
+                                <span className="unit-toggle-inline">
+                                    <span
+                                        className={unit === "C" ? "active" : ""}
+                                        onClick={() => setUnit("C")}
+                                    >
+                                        C
+                                    </span>
+                                    <span className="separator">|</span>
+                                    <span
+                                        className={unit === "F" ? "active" : ""}
+                                        onClick={() => setUnit("F")}
+                                    >
+                                        F
+                                    </span>
+                                </span>
+                            </p>
+
+
+                            <p className="w-description">{weatherData.description}</p>
+
+
+                        </div>
                         <img
                             src={weatherData.icon}
                             alt="weather icon"
                             className="weather-icon"
                         />
-                        <div className="temp-info">
-                            <p className="temperature">
-                                {weatherData.temperature}°<span className="unit">C</span>
-                            </p>
-                            <p className="w-description">{weatherData.description}</p>
-
-                        </div>
                     </div>
 
                     {/* Weather  Wind & Humidity */}

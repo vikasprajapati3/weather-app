@@ -1,12 +1,117 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌤️ Weather App
 
-Currently, two official plugins are available:
+A modern and responsive weather application built with **React + Vite**. Search for a city and view its current weather through a clean and simple interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Built to practice **React, API integration, responsive UI, and modern frontend development**.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   🔎 **Search weather** by city
+-   🌡️ **Current temperature** and weather conditions
+-   📱 **Responsive design**
+-   ⚡ **Fast Vite setup**
+-   🔐 **Environment-based API configuration**
+-   🚨 **Error handling** for invalid searches
+
+## 🛠️ Tech Stack
+
+-   **React** — UI and components
+-   **JavaScript** — Application logic
+-   **Vite** — Development and build tool
+-   **CSS** — Styling and responsive design
+-   **Weather API** — Weather data
+-   **ESLint** — Code quality
+
+## 📁 Project Structure
+
+```text
+weather-app/
+├── api/                  # Backend API routes
+├── public/               # Static assets
+├── src/                  # Main application source
+├── .env.example          # Environment variables
+├── .gitignore            # Git ignored files
+├── eslint.config.js      # ESLint configuration
+├── index.html            # HTML entry point
+├── package.json          # Dependencies and scripts
+├── package-lock.json     # Locked dependencies
+└── vite.config.js        # Vite configuration
+
+```
+
+## 🔄 How It Works
+
+```text
+Search City
+    ↓
+API Request
+    ↓
+Weather Data
+    ↓
+React State
+    ↓
+UI Update
+
+```
+
+The app sends a request when a city is searched, receives the weather data, and updates the interface using React.
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/vikasprajapati3/weather-app.git
+cd weather-app
+
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Get an API Key
+
+Create a free account with **OpenWeather** and generate an API key from your account dashboard.
+
+Then create your local environment file:
+
+```bash
+cp .env.example .env
+
+```
+
+Add your API key to `.env`:
+
+```env
+OPENWEATHER_API_KEY=your_openweather_api_key_here
+
+```
+
+
+### 4. Start the development server
+
+```bash
+npm run dev
+
+```
+
+Open the local URL provided by Vite in your browser.
+
+## 🔮 Future Improvements
+
+-   Multi-day forecast
+-   Current location detection
+-   Improved loading and error states
+-   Dark / light mode
+-   Weather-based animations
+
+## 👨‍💻 Author
+
+**Vikas Prajapati**
+
+GitHub: https://github.com/vikasprajapati3
